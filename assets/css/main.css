@@ -11373,6 +11373,7 @@ input.main-search-input::placeholder {
   padding-top: 300px;
   padding-bottom: 150px;
   position: relative;
+  height: 550px !important;
 }
 @media (max-width: 1199px) {
   .breadcrumb-style-1 {
@@ -11402,7 +11403,7 @@ input.main-search-input::placeholder {
     width: 12%;
   }
 }
-.breadcrumb-style-1:before {
+/* .breadcrumb-style-1:before {
   position: absolute;
   content: "";
   width: 100%;
@@ -11410,7 +11411,7 @@ input.main-search-input::placeholder {
   background: rgba(153, 185, 253, 0.75);
   top: 0;
   left: 0;
-}
+} */
 .breadcrumb-style-1 .breadcrumb-title {
   color: var(--theme);
   font-size: 60px;
