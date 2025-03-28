@@ -1,0 +1,55 @@
+
+
+
+.brand-slider{
+    padding: 114px 293px; 
+    @include breakpoint(max-xxxl){
+        padding: 80px 111px;
+    }
+    @include breakpoint(max-xxl){
+        padding: 60px 20px;
+    }
+    @include breakpoint(max-lg){
+        padding: 80px 0;
+    }
+    .swiper-slide{
+        @include breakpoint(max-sm){
+            margin-left: 0;
+            margin-right: 113px;
+        }
+
+    }
+}
+
+.brand-2{
+    padding-right: 290px;
+    padding-left: 290px;
+
+
+    @include breakpoint(max-xxxl){
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    @include breakpoint(max-xxl){
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 40px;
+    }
+    @include breakpoint(max-xl){
+        padding-top: 50px;
+    }
+    @include breakpoint(max-md){
+        padding-top: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    @include breakpoint(max-sm){
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+
+    }
+}
+
+
+

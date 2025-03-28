@@ -1,0 +1,77 @@
+/*----------------------------------------*/
+/*  2.8 Search Bar
+/*----------------------------------------*/
+
+
+@keyframes fadeInUp {
+	from {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  .fade-in-up {
+	animation: tpfadeInUp 1s ease-out;
+  }
+
+  @keyframes fadeInDown {
+	from {
+	  opacity: 0;
+	  transform: translateY(-20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  .fade-in-down {
+	animation: fadeInDown 1s ease-out;
+  }
+  
+  
+
+.tp-header-search-bar {
+	height: 400px;
+	position: fixed;
+	top: -100%;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background: #fff;
+	@include transition;
+	-webkit-animation: .6s ease-in-out 0s normal none 1 running tpfadeInUp;
+    animation: .6s ease-in-out 0s normal none 1 running tpfadeInUp;
+    &.tp-search-open{
+        top: 0;
+		@include transition;
+		-webkit-animation: .6s ease-in-out 0s normal none 1 running tpfadeInDown;
+    	animation: .6s ease-in-out 0s normal none 1 running tpfadeInDown;
+		
+    }
+}
+.contact-search-form-box{
+    & form{
+        position: relative;
+        & button{
+            position: absolute;
+            right: 18px;
+            top: 13px;
+            font-size: 17px;
+        }
+    }
+}
+.tp-search-close {
+	position: absolute;
+	right: 50px;
+	top: 35px;
+	font-size: 50px;
+	color: #222;
+	font-weight: 300;
+	width: 45px;
+	height: 45px;
+}

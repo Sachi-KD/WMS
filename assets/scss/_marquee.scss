@@ -1,0 +1,94 @@
+
+//>> Slider Animation Style 01 <<//
+.slider-style-1{
+    
+    padding-bottom: 110px;
+    @include breakpoint(max-xl){
+        padding-bottom: 100px;
+    }
+    @include breakpoint(max-lg){
+        padding-bottom: 50px;
+    }
+    @include breakpoint(max-sm){
+        padding: 50px 0;
+    }
+    .text-slider {
+        height: 100px;
+        margin-right: 4px;
+        color: #868686;
+        font-size: 74px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 90px;
+        
+        @include breakpoint(max-xl){
+            font-size: 50px;
+        }
+        @include breakpoint(max-xxs){
+            font-size: 45px;
+        }
+        #EC7216-item{
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px $theme-color;
+        } 
+    }
+}
+
+.pt-space{
+    @include breakpoint(max-sm){
+        padding-top: 0;
+    }
+}
+
+
+
+//>> Slider Animation  <<//
+.marquee-wrapper {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 9;
+    .marquee-inner {
+        position: absolute;
+        display: inline-flex;
+        width: 200%;
+    }
+    
+    .marquee-list {
+        float: left;
+        width: 50%;
+    }
+    
+    .marquee-item {
+        float: left;
+        transition: animation 0.2s ease-out;
+    }
+    
+    .marquee-inner.to-left {
+        animation: marqueeLeft 25s linear infinite;
+    }
+    
+    @keyframes marqueeLeft {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: -100%;
+        }
+    }
+    
+    .marquee-inner.to-right {
+        animation: marqueeRight 25s linear infinite;
+    }
+    
+    @keyframes marqueeRight {
+        0% {
+           right : 0;
+        }
+        100% {
+            right: -100%;
+        }
+    }
+}
+
+

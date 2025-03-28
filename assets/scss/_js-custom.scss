@@ -1,0 +1,130 @@
+
+//>> Nice Select Custom css1 <<//
+.nice-select {
+	background-color: #EFEFEF;
+	border: 0;
+	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	padding: 0 24px;
+	position: relative;
+	text-align: left !important;
+	height: 56px;
+	width: 100%;
+	line-height: 56px;
+    border-radius: 0;
+
+	@include breakpoint(max-sm){
+		margin-bottom: 30px;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		-webkit-transform-origin: 66% 66%;
+		-ms-transform-origin: 66% 66%;
+		transform-origin: 66% 66%;
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: all 0.15s ease-in-out;
+		transition: all 0.15s ease-in-out;
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 8px 6px 0 6px;
+		border-color: #FF4532 transparent transparent transparent;
+	}
+	.open{
+		&:after{
+			-webkit-transform: rotate(-180deg);
+			-ms-transform: rotate(-180deg);
+			transform: rotate(-180deg);
+		}
+	}
+	.list{
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+		box-sizing: border-box;
+		margin-top: 4px;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		-webkit-transform-origin: 50% 0;
+		-ms-transform-origin: 50% 0;
+		transform-origin: 50% 0;
+		-webkit-transform: scale(0.75) translateY(-21px);
+		-ms-transform: scale(0.75) translateY(-21px);
+		transform: scale(0.75) translateY(-21px);
+		-webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+		transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+		z-index: 9;
+		width: 100%;
+	}
+}
+
+//>> Product Range Slider <<//
+.Rangemiles{
+    margin-top: 8px;
+	.Rangemiles__details{
+		display: flex;
+		align-items: center;
+		margin-bottom: 6px;
+		span{
+			color: #020E28;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+		}
+
+	}
+    .slider-product-sorting {
+        height: 12px;
+		width: 490px;
+        border-radius: 0;
+        background: #EFEFEF;
+        border: 0 !important;
+		margin-bottom: 10px;
+
+		@include breakpoint(max-sm){
+			max-width: 100%;
+		}
+        .ui-slider-range {
+            background-color: #EC7216;
+            height: 12px;
+			border-radius: 0;
+        }
+        .ui-slider-handle {
+			height: 21px;
+			width: 7px;
+			background-color: #EC7216;
+			border: 0 !important;
+			top: -5px;
+			cursor: pointer;
+			transition: none;
+			border-radius: 0;
+			outline: none;
+			margin-left: -4px;
+        }
+    }
+    input {
+		color:#020E28;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		background: none;
+		text-align: end;
+        &:focus {
+            border: 0;
+        }
+    }
+    button {
+        &:focus {
+            outline: 0;
+        }
+    }
+}

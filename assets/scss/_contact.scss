@@ -1,0 +1,138 @@
+.tracking-percel-wrapper{
+    max-width: 1410px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    width: 100%;
+
+    .tracking-info{
+        padding: 60px;
+        border: 1px solid #E5E5E5;
+        background: rgba(255, 255, 255, 0.7);
+
+        @include breakpoint(max-sm){
+            padding: 15px;
+        }
+        .title{
+            color: $header-color;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+            @include breakpoint(max-sm){
+                font-size: 25px;
+            }
+        }
+        form{
+            .input-box{
+                label{
+                    color: $header-color;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+.contact-wrapper{
+    .contact-info-left{
+        .single-itme{
+            gap: 30px;
+            background-color: #EFEFEF;
+            padding: 39px 52px 39px 30px;
+            margin-bottom: 20px;
+
+            @include breakpoint(max-xl){
+                flex-wrap: wrap;
+            }
+            .icon{
+                position: relative;
+                background-color: $white;
+                width: 64px;
+                height: 64px;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 64px;
+                @include transition;
+                .circle{
+                    position: absolute;
+                    left: -10px;
+                    bottom: -10px;
+                    
+                }
+            }
+            .content{
+                .title{
+                    color: $header-color;
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+                p{
+                    color: #726B7D;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+            }
+            &:hover{
+                .icon{
+                    .anim{
+                        animation: icon-bounce 0.8s 1;
+                    }
+                }
+            }
+        }
+    }
+    .contact-info-right{
+        padding: 30px;
+
+        .contact-thumb{
+            img{
+                max-width: 100%;
+            }
+        }
+        .contact-form{
+            @include breakpoint(max-xl){
+                margin-top: 30px;
+            }
+            input{
+                background-color: $white;
+                color: #726B7D;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+            textarea{
+                background-color: $white;
+                color: #726B7D;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+            }
+            .btn-read{
+                padding: 11px 33px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+.google-map{
+    .map{
+        max-width: 100%;
+        iframe{
+           width: 100%;
+           margin-bottom: -8px;
+        }
+    }
+}

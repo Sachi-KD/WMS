@@ -1,0 +1,357 @@
+
+.btn-read {
+    background-color: $theme-color;
+    color: $white;
+    padding: 20px 30px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    z-index: 2;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+    text-transform: capitalize;
+
+    @include breakpoint(max-xxl){
+      padding: 20px 23px;
+    }
+    & i{
+      margin-left: 10px;
+    }
+    &:after{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0%;
+      height: 100%;
+      content: "";
+      background-color: $theme-color-2;
+      transition: all 0.5s ease-in-out;
+      z-index: -1;
+    }
+    &:hover{
+      color: $white;
+      &:after{
+        left: 0%;
+        right: auto;
+        width: 100%;
+      }
+    }
+}
+
+.btn-read-white {
+  background-color: $theme-color;
+  color: $white;
+  padding: 14px  30px;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  z-index: 2;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+  text-transform: capitalize;
+  & i{
+    margin-left: 10px;
+  }
+  &:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    content: "";
+    background-color: $white;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+  &:hover{
+    color: $theme-color;
+    &:after{
+      left: 0%;
+      right: auto;
+      width: 100%;
+    }
+  }
+}
+
+.btn-nblue {
+    background-color: $theme-color-2;
+    color: $white;
+    padding: 20px 30px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    z-index: 2;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+    text-transform: capitalize;
+    & i{
+      margin-left: 10px;
+    }
+    &:after{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0%;
+      height: 100%;
+      content: "";
+      background-color: $theme-color;
+      transition: all 0.5s ease-in-out;
+      z-index: -1;
+    }
+    &:hover{
+      color: $white;
+      &:after{
+        left: 0%;
+        right: auto;
+        width: 100%;
+      }
+    }
+}
+.btn-nblue-3 {
+    background-color: $theme-color-2;
+    color: $white;
+    padding: 20px 30px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    z-index: 2;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+    text-transform: capitalize;
+    & i{
+      margin-left: 10px;
+    }
+    &:after{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0%;
+      height: 100%;
+      content: "";
+      background-color: $white;
+      transition: all 0.5s ease-in-out;
+      z-index: -1;
+    }
+    &:hover{
+      color: $header-color;
+      &:after{
+        left: 0%;
+        right: auto;
+        width: 100%;
+      }
+    }
+}
+
+.btn-nblue-2 {
+    background-color: $theme-color-2;
+    color: $white;
+    padding: 20px 30px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    z-index: 2;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+    text-transform: capitalize;
+    & i{
+      margin-left: 10px;
+    }
+    &:hover{
+        color: $theme-color;
+    }
+}
+
+.btn-transparent{
+    background-color: transparent;
+    color: $white;
+    padding: 20px 30px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    z-index: 2;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid $white;
+    text-transform: capitalize;
+    & i{
+      margin-left: 10px;
+    }
+    &:after{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0%;
+      height: 100%;
+      content: "";
+      background-color: $theme-color;
+      transition: all 0.5s ease-in-out;
+      z-index: -1;
+    }
+    &:hover{
+      color: $white;
+      border: 1px solid $theme-color;
+      &:after{
+        left: 0%;
+        right: auto;
+        width: 100%;
+      }
+    }
+}
+
+.btn-white {
+  background-color: $white;
+  color: $header-color;
+  padding: 20px 30px;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  z-index: 2;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+  text-transform: capitalize;
+  & i{
+    margin-left: 10px;
+  }
+  &:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    content: "";
+    background-color: $theme-color;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+  &:hover{
+    color: $white;
+    &:after{
+      left: 0%;
+      right: auto;
+      width: 100%;
+    }
+  }
+}
+.btn-white-2 {
+  background-color: rgba(255, 255, 255, 0.30);
+  color: $white;
+  padding: 20px 30px;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  z-index: 2;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+  text-transform: capitalize;
+  & i{
+    margin-left: 10px;
+  }
+  &:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    content: "";
+    background-color: $theme-color;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+  &:hover{
+    color: $white;
+    &:after{
+      left: 0%;
+      right: auto;
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+// ============== video play btn ===============
+
+.play-btn {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+  &:before, &:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border: 30px solid rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    border-radius: 50%;
+    @include transition;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-name: ripple;
+  }
+}
+
+.play-btn > i {
+	display: inline-block;
+	width:  86px;
+	height: 86px;
+	line-height: 86px;
+	text-align: center;
+	background-color: $white;
+	color: $theme-color;
+	font-size: 20px;
+	border-radius: 50%;
+	z-index: 1;
+	@include transition;
+
+  // &.style-6 {
+  //   width:  60px;
+  //   display: inline-block;
+  //   height: 60px;
+  //   line-height: 60px;
+  // }
+
+  @include breakpoint(max-sm){
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+
+  }
+  &:hover{
+    background-color: $theme-color;
+    color: $white;
+  }
+}
+
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}

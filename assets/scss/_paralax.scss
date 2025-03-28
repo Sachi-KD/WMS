@@ -1,0 +1,29 @@
+.paralax-wrapper{
+    padding: 217px 0;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(max-sm){
+        padding: 70px 0;
+    }
+    &:before{
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: rgba(2, 14, 40, 0.60);
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    .paralax-title{
+        position: relative;
+        z-index: 555;
+        margin-bottom: 30px;
+    }
+    .btn-white-2{
+        padding: 14px 32px;
+        position: relative;
+        z-index: 444;
+    }
+}

@@ -1,0 +1,501 @@
+
+
+.work-style-1{
+    position: relative;
+    background-color: $theme-color-2;
+
+    .w-shape-1{
+        right: 0;
+        top: 0;
+
+        @include breakpoint(max-xl){
+            width: 20%;
+        }
+    }
+    .s-space{
+        margin-top: 20px;
+    }
+    .line-shape{
+        position: absolute;
+        left: 125px;
+        bottom: 35%;
+
+        @include breakpoint(max-lg){
+            display: none;
+        }
+    }
+    .title{
+        margin-bottom: 50px;
+
+        @include breakpoint(max-sm){
+            margin-bottom: 30px;
+        }
+        .title-sm{
+            margin-bottom: 18px;
+        }
+    }
+    
+    
+    .item-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .icon-box{
+            width: 190px;
+            height: 190px;
+            background-color: $white;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+
+            .shape-1{
+                position: absolute;
+                right: -19px;
+                top: -22px;
+                opacity: 0;
+                visibility: hidden;
+                @include transition;
+            }
+            .shape-2{
+                position: absolute;
+                bottom: -33px;
+                right: 40px;
+                transform: rotate(6deg);
+                width: 129px;
+            }
+            span{
+                color: $white;
+                font-size: 22px;
+                font-weight: 700;
+                display: inline-block;
+                position: absolute;
+                bottom: 18px;
+                right: 43px;
+                z-index: 112;
+                transform: rotate(9deg);
+            }
+            .img{
+                width: 75px;
+                height: 75px;
+                border-radius: 100%;
+                border: 1px solid rgba(22, 36, 61, 0.08);
+                text-align: center;
+                line-height: 75px;
+                img{
+                    @include transition;
+                }
+            }
+          &:before{
+                position: absolute;
+                content: "";
+                background-color: $theme-color;
+                clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 43%, 59% 56%, 15% 70%, 0 0);
+                z-index: 111;
+                width: 158px;
+                height: 79px;
+                bottom: -23px;
+                left: 11px;
+                transform: rotate(15deg);
+                @include transition;
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                background-color: $theme-color;
+                clip-path: polygon(0 0, 38% 41%, 100% 1%);
+                z-index: 111;
+                width: 51px;
+                height: 37px;
+                transform: rotate(3deg);
+                bottom: -33px;
+                right: 22px;
+                @include transition;
+            }
+        }
+        .content-box{
+            margin-top: 40px;
+            text-align: center;
+
+            @include breakpoint(max-lg){
+                margin: 40px 0;
+                text-align: center;
+                padding: 0 209px;
+            }
+            @include breakpoint(max-md){
+                padding: 0 3px;
+            }
+            .section-22-white{
+                margin-bottom: 13px;
+            }
+
+            h5 {
+                color: $white;
+            }
+            p{
+                color: rgba(255, 255, 255, 0.70);
+            }
+        }
+        &:hover{
+            .shape-1{
+                opacity: 1;
+                visibility: visible;
+            }
+            .icon-box{
+                .img{
+                    img{
+                        transform: rotateY(360deg);
+                    }
+                }
+                &:after{
+                    background-color: #373940;
+                }
+            }
+        }
+        &:last-child{
+            .content-box{
+                @include breakpoint(max-sm){
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .active{
+        .icon-box{
+            .shape-1{
+                opacity: 1;
+                visibility: visible;
+            }
+            &:after{
+                background-color: #373940;
+            }
+        }
+    }
+}
+
+
+.work-style-2{
+    background-color: $theme-color-2;
+    position: relative;
+
+
+    @include breakpoint(max-xl){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @include breakpoint(max-lg){
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .shape{
+        position: absolute;
+        right: 52px;
+        bottom: 18px;
+
+        @include breakpoint(max-xxxl){
+            right: 30px;
+            top: 59px;
+            width: 3%;
+        }
+
+        @include breakpoint(max-md){
+            display: none;
+        }
+    }
+    .work-content{
+        p{
+            color: $white;
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.7;
+
+            @include breakpoint(max-md){
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .items{
+        max-width: 100%;
+        height: 135px;
+        border: 1.092px solid rgba(255, 255, 255, 0.19);
+        padding: 24px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include transition;
+        position: relative;
+        cursor: pointer;
+ 
+        .title{
+            color: $white;
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 1.2;
+            position: relative;
+            z-index: 2;
+            span{
+                opacity: 0.5;
+            }
+        }
+        .icon{
+            position: relative;
+            z-index: 2;
+            svg{
+                path{
+                    @include transition;
+                    fill: $theme-color;
+                }
+            } 
+        }
+        &:hover{
+            &:before{
+                transform: scale(1, 1);
+                opacity: 1;
+                visibility: visible;
+            }
+            .icon{
+                svg path{
+                    fill: $white;
+                }
+            }
+            .title{
+                span{
+                    opacity: 1;     
+                }
+            }
+        }
+    }
+    .hover-color{
+        &:before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: $theme-color;
+            @include transition;
+            transform: scale(0, 0);
+            opacity: 0;
+            visibility: hidden;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            &:hover{
+                &:before{
+                    transform: scale(1, 1);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+    }
+    .last{
+        background-color: $theme-color;
+        position: relative;
+
+
+        &:hover{
+            &:before{
+                opacity: 1;
+                visibility: visible;
+                transform: translate3d(0, 0, 0);
+            }
+            &:after{
+                opacity: 1;
+                visibility: visible;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        &:before{
+            position: absolute;
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 0 0 35px 35px;
+            border-color: transparent transparent rgba(255, 255, 255, 0.20) transparent;
+            transform: rotate(0deg);
+            bottom: 0;
+            right: 0;
+            transform: translate3d(7px, 7px, 7px);
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+        &:after{
+            position: absolute;
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 0 0 48px 48px;
+            border-color: transparent transparent rgba(255, 255, 255, 0.25) transparent;
+            transform: rotate(0deg);
+            bottom: 0;
+            right: 0;
+            transform: translate3d(5px, 5px, 5px);
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+        a{
+            width: 60px;
+            height: 60px;
+            border: 1.092px solid rgba(255, 255, 255, 0.25);
+            text-align: center;
+            line-height: 60px;
+            border-radius: 50%;
+            font-size: 15px;
+            color: $white;
+        }
+    }
+    .active{
+        background-color: $theme-color;
+        .icon{
+            svg path{
+                fill: $white;
+            }
+        }
+    }
+
+}
+
+.work-style-3{
+   padding-left: 214px;
+    padding-right: 340px;
+    padding-top: 120px;
+
+    @include breakpoint(max-xxxl){
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 80px;
+    }
+    @include breakpoint(max-xxl){
+        padding-top: 50px;
+    }
+    @include breakpoint(max-xl){
+        padding-top: 100px;
+        padding-bottom: 0;
+    }
+    @include breakpoint(max-lg){
+        padding-top: 80px;
+    }
+   .work-content-wrapper{
+        padding-top: 120px;
+        padding-bottom: 150px;
+        display: flex;
+        align-items: center;
+        max-width: 1370px;
+        position: relative;
+        z-index: 5;
+        gap: 168px;
+        margin: 0 auto;
+        @include breakpoint(max-xxxl){
+            flex-wrap: wrap;
+            gap: 0;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        @include breakpoint(max-lg){
+            gap: 30px;
+        }
+        @include breakpoint(max-sm){
+            padding-top: 30px;
+            padding-bottom: 0;
+        }
+
+        .shape{
+            top: 45px;
+            left: -75px;
+            @include breakpoint(max-xl4){
+                display: none;
+            }
+        }
+        .single-box{
+            width: 217px;
+            height: 110px;
+            background-color: #EFEFEF;
+            position: relative;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            .title{
+
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .heading{
+                    line-height: 28px;
+                    color: #020E28;
+                    font-size: 24px;
+                    font-weight: 600;
+
+                }
+            }
+            .side-content{
+                position: absolute;
+                top: 19px;
+                right: -100px;
+
+                @include breakpoint(max-xl4){
+                    display: none;
+                }
+                .read{
+                    color: $theme-color;
+                    font-size: 24px;
+                    font-weight: 600;
+                    display: block;
+                    text-align: center;
+                }
+                .black{
+                    color: #868686;
+                    font-size: 16px;
+                    font-weight: 400;
+                    display: block;
+                }
+            }
+            &:before{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: 16px;
+                background-color: $theme-color;
+                @include transition;
+                z-index: -1;
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(0, 0);
+            }
+            &:hover{
+                .heading{
+                    color: $white;
+                }
+                &:before{
+                    transform: scale(1, 1);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .active{
+            background-color: $theme-color;
+            @include transition;
+            .title{
+                .heading{
+                    color: $white;
+                }
+            }
+        }
+   }
+}
