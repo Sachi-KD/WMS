@@ -8708,8 +8708,38 @@ input.main-search-input::placeholder {
   visibility: visible;
   color: var(--white);
 }
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #092038; /* Bootstrap primary color */
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.about-left-thumb {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack images in a column */
+  align-items: center; /* Center them */
+}
+
+.arrow-link:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+  transform: scale(1.1);
+}
+
+.arrow-link i {
+  font-size: 18px;
+}
+
+
+
 .work-style-2 .last {
-  background-color: var(--theme2);
+  /* background-color: var(--theme2); */
   position: relative;
   color: var(--white);
 }
